@@ -14,7 +14,7 @@ Python-based security log monitoring tool for detecting anomalies, error pattern
  - You can start the SSH Services again with `sudo bash startSSH.sh`
  
  **How to run it on Server in background**
-	It starts a screen where the Script runs in background, you can see all of your scripts with `screen -ls`
+	It starts a screen where the Script runs in background, you can see all of your screens with `screen -ls`
 	If you dont have screen, install it with `sudo apt install screen`
 	**Start Screen**
 	
