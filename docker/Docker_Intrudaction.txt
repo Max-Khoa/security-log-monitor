@@ -1,0 +1,9 @@
+docker-compose up -d --build
+docker-compose logs target  # SSH-Logs sehen!
+
+From Attacker:
+docker-compose exec attacker bash
+hydra -l testuser -P /usr/share/wordlists/rockyou.txt ssh://target
+
+From Logs in ~/Github/security-log-monitor/logs/ !
+cat logs/auth.log

@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  target:
+    build: ./target
+    ports:
+      - "2222:22"  # Extern 2222 → intern 22
+    networks:
+      - pentest
+    volumes:
+      - ./logs:/var/log/auth-logs  # Logs für euer Programm!
+
+  attacker:
+    build: ./attacker
+    depends_on:
+      - target
+    networks:
+      - pentest
+    command: tail -f /dev/null  # Interaktives Bash
+
+networks:
+  pentest:
