@@ -36,7 +36,7 @@ try:
                 print(colored("WARNING: 10 failed logging reports, it could be a bruteforce attack!", "red"))
                 os.system("systemctl stop ssh")
                 os.system("systemctl stop ssh.socket")
-                print(colored("SSH stopped, start it manually with 'systemctl start ssh' and 'systemctl start ssh.socket", "magenta"))
+                print(colored("SSH stopped, start it manually with 'systemctl start ssh' and 'systemctl start ssh.socket' or run startSSH.sh (with 'sudo bash startSSH.sh')", "magenta"))
                 failedLogginAttemp = failedLogginAttemp + 1
             
 
