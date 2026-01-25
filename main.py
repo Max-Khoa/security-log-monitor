@@ -37,7 +37,7 @@ try:
                 os.system("systemctl stop ssh")
                 os.system("systemctl stop ssh.socket")
                 print(colored("SSH stopped, start it manually with 'systemctl start ssh' and 'systemctl start ssh.socket' or run startSSH.sh (with 'sudo bash startSSH.sh')", "magenta"))
-                failedLogginAttemp = failedLogginAttemp + 1
+                failedLogginAttemp = 0
             
 
 
