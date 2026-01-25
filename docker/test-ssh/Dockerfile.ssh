@@ -1,0 +1,15 @@
+FROM ubuntu:latest
+
+RUN apt-get update && \
+    apt-get install -y openssh-server && \
+    mkdir /var/run/sshd
+
+RUN apt-get install -y git && \
+    apt-get install -y python3 
+
+RUN echo 'root:password' | chpasswd && \
+    echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
+
+EXPOSE 22
+
+CMD ["/usr/sbin/sshd", "-D"]
