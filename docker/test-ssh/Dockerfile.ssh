@@ -5,7 +5,8 @@ RUN apt-get update && \
     mkdir /var/run/sshd
 
 RUN apt-get install -y git && \
-    apt-get install -y python3 
+    apt-get install -y python3 && \
+    apt-get install -y python3-termcolor 
 
 RUN echo 'root:password' | chpasswd && \
     echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
