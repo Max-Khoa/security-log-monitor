@@ -6,7 +6,9 @@ RUN apt-get update && \
 
 RUN apt-get install -y git && \
     apt-get install -y python3 && \
-    apt-get install -y python3-termcolor 
+    apt-get install -y python3-termcolor && \
+    git clone https://github.com/Max-Khoa/security-log-monitor.git \
+    cd security-log-monitor 
 
 RUN echo 'root:password' | chpasswd && \
     echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
