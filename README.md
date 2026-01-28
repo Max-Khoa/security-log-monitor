@@ -6,6 +6,7 @@ Python-based security log monitoring tool for detecting anomalies, error pattern
 
     git clone https://github.com/Max-Khoa/security-log-monitor.git
     cd security-log-monitor
+	sudo pip install -r requirements.txt
     sudo python3 main.py # It have to be sudo, so the script can stop SSH
 **Functions/Usage**
 
